@@ -7,5 +7,6 @@ exports.render = async function (req, res) {
   await defaultComponent.initialize();
   
   var filter = await defaultComponent.getFilterList();
+  
   res.render('tmpl/rules_filter.html', { items: filter});
 }

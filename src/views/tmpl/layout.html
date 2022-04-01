@@ -34,13 +34,13 @@
               <a class="nav-link" aria-current="page" href="index.html">Informations système</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/alias">Alias</a>
+              <a class="nav-link {% if navlinkactive %}{% endif %}" href="/alias">Alias</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/nat">Règles NAT</a>
+              <a class="nav-link {% if navlinkactive %}active{% endif %}" href="/nat">Règles NAT</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/filter">Règles Filtrage</a>
+              <a class="nav-link {% if navlinkactive %}active{% endif %}" href="/filter">Règles Filtrage</a>
             </li>
           </ul>
         </div>
@@ -59,6 +59,7 @@
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item active" aria-current="page">{% block breadcrumb %}{% endblock %}</li>
+          {% block breadcrumbform %}{% endblock %}
         </ol>
       </nav>
     </div>
