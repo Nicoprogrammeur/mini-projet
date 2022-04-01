@@ -10,12 +10,29 @@
 
 {% block content %}
 <h2>Liste des règles Nat</h2>
+<table id="myTab" class="table table-striped">
+    <thead>
+        <tr>
+            <th>Règle NAT</th>
+            <th>Adresse IP</th>
+            <th>Port</th>
+        </tr>
+    </thead>
+    <tbody>
 {% for row in items %}
-
+<!--
 <div class="alert alert-primary" role="alert">
     <strong>Le {{ row.nameNat }} - {{ row.ipAddress }}</strong>
     <br />{{ row.port }}
 </div>
+-->
+<tr>
+    <td>Le {{ row.nameNat }}</td>
+    <td>{{ row.ipAddress }}</td>
+    <td>{{ row.port }}</td>
+</tr>
 
 {% endfor %}
+    </tbody>
+</table>
 {% endblock %}
