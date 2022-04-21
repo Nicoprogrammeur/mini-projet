@@ -38,6 +38,8 @@ var contact = require('./controllers/iptables/contact');
 app.get('/contact', contact.render);
 
 
+
+
 // Routes statiques
 app.use('/css/bootstrap.min.css', express.static('node_modules/bootstrap/dist/css/bootstrap.min.css'));
 app.use('/css/bootstrap.min.css.map', express.static('node_modules/bootstrap/dist/css/bootstrap.min.css.map'));
@@ -48,6 +50,7 @@ app.use('/js/bootstrap.min.js.map', express.static('node_modules/bootstrap/dist/
 app.use('/js/jquery.slim.js', express.static('node_modules/jquery/dist/jquery.slim.js'));
 app.use('/js/popper.min.js', express.static('node_modules/popper.js/dist/popper.min.js'));
 app.use('/images', express.static('views/images/'));
+app.use('/index.html', express.static('views/tmpl/index.html'));
 
 // Démarrage du serveur
 app.listen(N_PORT);
