@@ -34,6 +34,10 @@ app.get('/formAlias', form.render);
 var form = require('./controllers/iptables/formFilter');
 app.get('/formFilter', form.render);
 
+var contact = require('./controllers/iptables/contact');
+app.get('/contact', contact.render);
+
+
 // Routes statiques
 app.use('/css/bootstrap.min.css', express.static('node_modules/bootstrap/dist/css/bootstrap.min.css'));
 app.use('/css/bootstrap.min.css.map', express.static('node_modules/bootstrap/dist/css/bootstrap.min.css.map'));
