@@ -8,3 +8,6 @@ mysql -e "CREATE DATABASE IF NOT EXISTS projet"
 mysql -e "GRANT ALL ON *.* TO 'websiteaccount'@'localhost' IDENTIFIED BY 'passwordDbUniv01' WITH GRANT OPTION;"
 # Make our changes take effect
 mysql -e "FLUSH PRIVILEGES"
+
+# Ce fichier ne sert à rien
+# on a déja mysql.sh

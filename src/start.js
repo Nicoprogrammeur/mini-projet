@@ -37,7 +37,8 @@ app.get('/formFilter', form.render);
 var contact = require('./controllers/iptables/contact');
 app.get('/contact', contact.render);
 
-
+var localisation = require('./controllers/projettables/localisation');
+app.get('/localisation', localisation.render);
 
 
 // Routes statiques
