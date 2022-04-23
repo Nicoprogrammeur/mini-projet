@@ -15,7 +15,7 @@ templateEngine.configure('views', {
     express: app
 });
 
-var start = require('./controllers/iptables/nat');
+var start = require('./controllers/projettables/localisation');
 app.get('/', start.render);
 
 var alias = require('./controllers/iptables/alias');
