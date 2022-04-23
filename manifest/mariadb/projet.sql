@@ -10,10 +10,10 @@ USE `projet`;
  
   `prix` float(6) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`) VALUES
-	(1,`Lyon`,`France`,`Venise`,`Italie`);
-    (2,`Paris`,`France`,`Venise`,`Italie`);
-    (3,`Paris`,`France`,`Los-Angeles`,`USA`);
+INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `prix`) VALUES
+	(1,`Lyon`,`France`,`Venise`,`Italie`,`1000`);
+    (2,`Paris`,`France`,`Venise`,`Italie`,`1500`);
+    (3,`Paris`,`France`,`Los-Angeles`,`USA`,`3000`);
 
 CREATE TABLE IF NOT EXISTS `projet`.`voyage` (
   `idvoyage` INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
