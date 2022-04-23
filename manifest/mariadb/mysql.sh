@@ -9,3 +9,4 @@ mysql -e "GRANT ALL ON *.* TO 'websiteaccount'@'localhost' IDENTIFIED BY 'passwo
 # Make our changes take effect
 mysql -e "FLUSH PRIVILEGES"
 
+#CONSTRAINT `FK_localisation` FOREIGN KEY (`loc_id`) REFERENCES `projet`.`localisation`(`idloc`)
