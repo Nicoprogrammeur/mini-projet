@@ -39,6 +39,8 @@ app.get('/contact', contact.render);
 
 var localisation = require('./controllers/projettables/localisation');
 app.get('/localisation', localisation.render);
+var voyage = require('./controllers/projettables/voyage');
+app.get('/voyage', voyage.render);
 
 
 // Routes statiques
@@ -52,6 +54,7 @@ app.use('/js/jquery.slim.js', express.static('node_modules/jquery/dist/jquery.sl
 app.use('/js/popper.min.js', express.static('node_modules/popper.js/dist/popper.min.js'));
 app.use('/images', express.static('views/images/'));
 app.use('/index.html', express.static('views/tmpl/index.html'));
+app.use('/free.html', express.static('views/tmpl/free.html'));
 
 // Démarrage du serveur
 app.listen(N_PORT);
