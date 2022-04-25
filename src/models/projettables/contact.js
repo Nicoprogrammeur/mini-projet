@@ -17,7 +17,7 @@ class Contact {
 
   async getContactList() {
     try {
-      this.contactList = await connexion.query("SELECT idcontact, nomcontact, mailcontact, mescontact FROM contact");
+      this.contactList = await connexion.query("SELECT idcontact, nomcontact, mailcontact, sujetcontact, mescontact FROM contact");
 
       return this.contactList;
     }
@@ -28,6 +28,23 @@ class Contact {
       //console.log(anError);
     }
   }
+  async setContactList(rep) {
+    try {
+      var name = rep.body.nomcontact;
+      var mail = rep.body.mailcontact;
+      var objet = rep.body.objetcontact;
+      var message = rep.body.mescontact;
+      this.contactList = await connexion.query(`INSERT INTO contact ( idcontact,nomcontact,mailcontact,sujetcontact,mescontact) VALUES (NULL,"${name}","${mail}","${objet}","${message}")`);
+    }
+    catch (anError) {
+      console.log('Error to set contact list!');
+
+      // See error from SQL Client
+      //console.log(anError);
+    }
+  }
+
+
   getContact() {
     return this.contactList;
   }

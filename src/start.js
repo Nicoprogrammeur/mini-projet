@@ -42,6 +42,7 @@ var voyage = require('./controllers/projettables/voyage');
 app.get('/voyage', voyage.render);
 var contact = require('./controllers/projettables/contact');
 app.get('/contact', contact.render);
+//app.post('/contact', contact.setrender);
 
 
 // Routes statiques
