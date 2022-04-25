@@ -36,4 +36,10 @@ INSERT INTO `projet`.`voyage` ( `idvoyage`,`loc_id`,`nomvoyage`,`hdepart`,`harri
 INSERT INTO `projet`.`voyage` ( `idvoyage`,`loc_id`,`nomvoyage`,`hdepart`,`harrive`,`durre`,`prix`) VALUES
     (NULL,3,'Escale Paris - LA','12h05','13h15','11h10',600);
 
- 
+CREATE TABLE IF NOT EXISTS `projet`.`contact` (
+  `idcontact` int(11) NOT NULL AUTO_INCREMENT,
+  `nomcontact` varchar(50) DEFAULT NULL,
+  `mailcontact` varchar(255) DEFAULT NULL,
+  `mescontact` TEXT DEFAULT NULL,
+  PRIMARY KEY (`idcontact`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
