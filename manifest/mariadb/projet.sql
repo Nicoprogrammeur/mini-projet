@@ -40,6 +40,10 @@ CREATE TABLE IF NOT EXISTS `projet`.`contact` (
   `idcontact` int(11) NOT NULL AUTO_INCREMENT,
   `nomcontact` varchar(50) DEFAULT NULL,
   `mailcontact` varchar(255) DEFAULT NULL,
+  `objetcontact` TEXT DEFAULT NULL,
   `mescontact` TEXT DEFAULT NULL,
   PRIMARY KEY (`idcontact`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `projet`.`contact` ( `idcontact`,`nomcontact`,`mailcontact`,`objetcontact`,`mescontact`) VALUES
+    (NULL,'Nico','nicolas@master.com','Test de message contact','je suis un message tous ce qui a de plus normal');

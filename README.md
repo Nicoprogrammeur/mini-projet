@@ -30,7 +30,7 @@ Build the database
 
 Insert schema in database
 
-`sudo mysql -u root -p <manifest/mariadb/db.sql`
+`sudo mysql -u root -p <manifest/mariadb/projet.sql`
 
 ### Initialize the website
 
