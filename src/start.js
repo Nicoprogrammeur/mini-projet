@@ -34,13 +34,14 @@ app.get('/formAlias', form.render);
 var form = require('./controllers/iptables/formFilter');
 app.get('/formFilter', form.render);
 
-var contact = require('./controllers/iptables/contact');
-app.get('/contact', contact.render);
+
 
 var localisation = require('./controllers/projettables/localisation');
 app.get('/localisation', localisation.render);
 var voyage = require('./controllers/projettables/voyage');
 app.get('/voyage', voyage.render);
+var contact = require('./controllers/projettables/contact');
+app.get('/contact', contact.render);
 
 
 // Routes statiques

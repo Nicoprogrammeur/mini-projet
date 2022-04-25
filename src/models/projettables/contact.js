@@ -1,4 +1,4 @@
-var sql = require('../db/db_mariadb');
+var sql = require('../db/db_projet');
 
 var connexion = null;
 
@@ -17,7 +17,7 @@ class Contact {
 
   async getContactList() {
     try {
-      this.contactList = await connexion.query("SELECT id, name, ipAddress, port FROM nat_alias");
+      this.contactList = await connexion.query("SELECT idcontact, nomcontact, mailcontact, mescontact FROM contact");
 
       return this.contactList;
     }
