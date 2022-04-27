@@ -34,6 +34,7 @@ class Contact {
       var mail = rep.body.mailcontact;
       var objet = rep.body.objetcontact;
       var message = rep.body.mescontact;
+      
       this.contactList = await connexion.query(`INSERT INTO contact ( idcontact,nomcontact,mailcontact,sujetcontact,mescontact) VALUES (NULL,"${name}","${mail}","${objet}","${message}")`);
     }
     catch (anError) {

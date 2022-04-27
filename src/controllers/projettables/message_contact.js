@@ -4,8 +4,8 @@ exports.render = async function (req, res) {
   var defaultComponent = new Contact(req, res);
 
   await defaultComponent.initialize();
-  
-  var contactList = await defaultComponent.getContactList();
 
+  await defaultComponent.setContactList(req);
+  var contactList = await defaultComponent.getContactList();
   res.render('tmpl/contact.html', { items: contactList});
 }
