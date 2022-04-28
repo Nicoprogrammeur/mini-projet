@@ -9,7 +9,7 @@ USE `projet`;
   `parrive` varchar(50) DEFAULT NULL,
  
   `prix` float(6) DEFAULT NULL,
-  `loc_img` float(50) DEFAULT NULL
+  `loc_img` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `prix`, `loc_img`) VALUES 
   (1,'Lyon','France','Venise','Italie',60,'train.jpg');
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `projet`.`voyage` (
   `harrive` varchar(6) DEFAULT NULL,
   `durre` varchar(6) DEFAULT NULL,
   `prix` float(6) DEFAULT NULL,
-  `voy_img` float(50) DEFAULT NULL,
+  `voy_img` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`idvoyage`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
