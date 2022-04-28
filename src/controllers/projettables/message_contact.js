@@ -8,4 +8,7 @@ exports.render = async function (req, res) {
   await defaultComponent.setContactList(req);
   var contactList = await defaultComponent.getContactList();
   res.render('tmpl/contact.html', { items: contactList});
+
+  //see variable to POST
+  //console.log(req.body);
 }

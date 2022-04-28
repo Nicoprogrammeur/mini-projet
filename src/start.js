@@ -1,8 +1,12 @@
 var express = require('express');
 var templateEngine = require('nunjucks');
 
+var myParser = require("body-parser");
+
 // Configuration d'Express
 var app = module.exports = express();
+
+app.use(myParser.urlencoded({extended : true}));
 
 const N_PORT = 3000;
 const N_LISTEN = 'localhost';

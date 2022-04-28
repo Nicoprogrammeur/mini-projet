@@ -30,12 +30,12 @@ class Contact {
   }
   async setContactList(rep) {
     try {
-      var name = rep.body.nomcontact;
+      var nom = rep.body.nomcontact;
       var mail = rep.body.mailcontact;
-      var objet = rep.body.objetcontact;
+      var objet = rep.body.sujetcontact;
       var message = rep.body.mescontact;
 
-      this.contactList = await connexion.query(`INSERT INTO contact(idcontact,nomcontact,mailcontact,sujetcontact,mescontact) VALUES(NULL,"${name}","${mail}","${objet}","${message}")`);
+      this.contactList = await connexion.query(`INSERT INTO contact(idcontact,nomcontact,mailcontact,sujetcontact,mescontact) VALUES(NULL,"${nom}","${mail}","${objet}","${message}")`);
     }
     catch (anError) {
       console.log('Error to set contact list!');
