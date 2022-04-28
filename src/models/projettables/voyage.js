@@ -17,7 +17,7 @@ class Voyage {
 
   async getVoyageList() {
     try {
-      this.voyageList = await connexion.query("SELECT idvoyage, loc_id, nomvoyage, hdepart, harrive, durre, prix FROM voyage");
+      this.voyageList = await connexion.query("SELECT idvoyage, loc_id, nomvoyage, hdepart, harrive, durre, prix, voy_img FROM voyage");
 
       return this.voyageList;
     }

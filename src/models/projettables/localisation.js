@@ -17,7 +17,7 @@ class Local {
 
   async getLocalList() {
     try {
-      this.localList = await connexion.query("SELECT idloc, vdepart, pdepart, varrive, parrive, prix FROM localisation");
+      this.localList = await connexion.query("SELECT idloc, vdepart, pdepart, varrive, parrive, prix, loc_img FROM localisation");
 
       return this.localList;
     }

@@ -8,14 +8,15 @@ USE `projet`;
   `varrive` varchar(50) DEFAULT NULL,
   `parrive` varchar(50) DEFAULT NULL,
  
-  `prix` float(6) DEFAULT NULL
+  `prix` float(6) DEFAULT NULL,
+  `loc_img` float(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `prix`) VALUES 
-  (1,'Lyon','France','Venise','Italie',60);
-INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `prix`) VALUES 
-  (2,'Paris','France','Venise','Italie',120);
-INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `prix`) VALUES 
-  (3,'Paris','France','Los-Angeles','USA',600);
+INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `prix`, `loc_img`) VALUES 
+  (1,'Lyon','France','Venise','Italie',60,'train.jpg');
+INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `prix`, `loc_img`) VALUES 
+  (2,'Paris','France','Venise','Italie',120,'train.jpg');
+INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `prix`, `loc_img`) VALUES 
+  (3,'Paris','France','Los-Angeles','USA',600,'avion.jpg');
 
 CREATE TABLE IF NOT EXISTS `projet`.`voyage` (
   `idvoyage` int(11) NOT NULL AUTO_INCREMENT,
@@ -25,16 +26,17 @@ CREATE TABLE IF NOT EXISTS `projet`.`voyage` (
   `harrive` varchar(6) DEFAULT NULL,
   `durre` varchar(6) DEFAULT NULL,
   `prix` float(6) DEFAULT NULL,
+  `voy_img` float(50) DEFAULT NULL,
   PRIMARY KEY (`idvoyage`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
-INSERT INTO `projet`.`voyage` ( `idvoyage`,`loc_id`,`nomvoyage`,`hdepart`,`harrive`,`durre`,`prix`) VALUES
-	(NULL,1,'Escale Lyon - Venise','8h30','9h50','1h20',60);
-INSERT INTO `projet`.`voyage` ( `idvoyage`,`loc_id`,`nomvoyage`,`hdepart`,`harrive`,`durre`,`prix`) VALUES
-    (NULL,2,'Escale Paris -  Venise','10h30','12h10','1h40',120);
-INSERT INTO `projet`.`voyage` ( `idvoyage`,`loc_id`,`nomvoyage`,`hdepart`,`harrive`,`durre`,`prix`) VALUES
-    (NULL,3,'Escale Paris - LA','12h05','13h15','11h10',600);
+INSERT INTO `projet`.`voyage` ( `idvoyage`,`loc_id`,`nomvoyage`,`hdepart`,`harrive`,`durre`,`prix`, `voy_img`) VALUES
+	(NULL,1,'Escale Lyon - Venise','8h30','9h50','1h20',60,'train.jpg');
+INSERT INTO `projet`.`voyage` ( `idvoyage`,`loc_id`,`nomvoyage`,`hdepart`,`harrive`,`durre`,`prix`, `voy_img`) VALUES
+    (NULL,2,'Escale Paris -  Venise','10h30','12h10','1h40',120,'train.jpg');
+INSERT INTO `projet`.`voyage` ( `idvoyage`,`loc_id`,`nomvoyage`,`hdepart`,`harrive`,`durre`,`prix`, `voy_img`) VALUES
+    (NULL,3,'Escale Paris - LA','12h05','13h15','11h10',600,'avion.jpg');
 
 CREATE TABLE IF NOT EXISTS `projet`.`contact` (
   `idcontact` int(11) NOT NULL AUTO_INCREMENT,
