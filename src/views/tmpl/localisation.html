@@ -1,7 +1,6 @@
 {% extends 'tmpl/layout.html' %}
 
 {% block title %}Localisation page{% endblock %}
-{% block breadcrumb %}Localisation{% endblock %}
 {% block navactivelocalisation %}active{% endblock %}
 {% block styles %}
 <link rel="stylesheet" href="css/default.css">
@@ -10,7 +9,7 @@
 {% endblock %}
 
 {% block content %}
-<h2>Liste des localisation</h2>
+<h2>Liste des localisations</h2>
 
 {% for row in items %}
 <div class="row mb-2 border rounded overflow-hidden flex-md-row shadow-sm h-md-250 position-relative">

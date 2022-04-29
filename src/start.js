@@ -22,7 +22,8 @@ templateEngine.configure('views', {
 var start = require('./controllers/projettables/localisation');
 app.get('/', start.render);
 
-
+var home = require('./controllers/projettables/home');
+app.get('/home', home.render);
 var localisation = require('./controllers/projettables/localisation');
 app.get('/localisation', localisation.render);
 var voyage = require('./controllers/projettables/voyage');
@@ -31,6 +32,8 @@ var contact = require('./controllers/projettables/contact');
 app.get('/contact', contact.render);
 var contact = require('./controllers/projettables/message_contact');
 app.post('/contact', contact.render);
+var about = require('./controllers/projettables/about');
+app.get('/about', about.render);
 
 
 // Routes statiques

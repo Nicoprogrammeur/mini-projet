@@ -30,26 +30,23 @@
       <ul class="nav nav-pills">
         <li class="nav-item"><a href="index.html" class="nav-link {% block navactivehome %}{% endblock %}" aria-current="page">Home</a></li>
         <li class="nav-item"><a href="/localisation" class="nav-link {% block navactivelocalisation %}{% endblock %}">Localisation</a></li>
-        <li class="nav-item"><a href="/voyage" class="nav-link {% block navactivevoyage %}{% endblock %}">Voyage</a></li>
+        <li class="nav-item dropdown">
+          <a href="/voyage" class="nav-link dropdown-toggle {% block navactivevoyage %}{% endblock %}" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Voyage
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/voyage/triprix">Prix</a></li>
+            <li><a class="dropdown-item" href="/voyage/tricroi">Croissant</a></li>
+            <li><a class="dropdown-item" href="/voyage/tridecroi">Décroissant</a></li>
+          </ul>
+        </li>
         <li class="nav-item"><a href="/contact" class="nav-link {% block navactivecontact %}{% endblock %}">Contact</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="/about" class="nav-link {% block navactiveabout %}{% endblock %}">About</a></li>
       </ul>
-      
     </header>
   </div>
 
   <main class="container">
-  <div class="container">
-    <div class="row">
-      <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item active" aria-current="page">{% block breadcrumb %}{% endblock %}</li>
-          {% block breadcrumbform %}{% endblock %}
-        </ol>
-      </nav>
-    </div>
-  </div>
   <div class="container">
       {% block content %}{% endblock %}
   </main>
@@ -73,9 +70,6 @@
             <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-muted">Home</a></li>
             <li class="nav-item mb-2"><a href="/localisation" class="nav-link p-0 text-muted">Localisation</a></li>
             <li class="nav-item mb-2"><a href="/voyage" class="nav-link p-0 text-muted">Voyage</a></li>
-            <li class="nav-item mb-2"><a href="/alias" class="nav-link p-0 text-muted">Alias</a></li>
-            <li class="nav-item mb-2"><a href="/nat" class="nav-link p-0 text-muted">Règles NAT</a></li>
-            <li class="nav-item mb-2"><a href="/filter" class="nav-link p-0 text-muted">Règles Filtage</a></li>
             <li class="nav-item mb-2"><a href="/contact" class="nav-link p-0 text-muted">Contact</a></li>
           </ul>
         </div>

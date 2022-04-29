@@ -1,0 +1,65 @@
+{% extends 'tmpl/layout.html' %}
+
+{% block title %}Home page{% endblock %}
+{% block navactivehome %}active{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="css/default.css">
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+        <h1 class="display-4 fst-italic">Site de voyage en ligne</h1>
+      
+      <form>
+            <div class="form-group">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                    <label class="form-check-label" for="inlineRadio1">Aller-retour</label>
+              </div>
+              <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Aller simple</label>
+              </div>
+              <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                    <label class="form-check-label" for="inlineRadio2">Multi-destination</label>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col"><input type="text" class="form-control" id="formGroupExampleInput" placeholder="D'où partez-vous ?"></div>
+              <div class="col"><input type="text" class="form-control" id="formGroupExampleInput2" placeholder="D'où allez-vous"></div>
+          </div>
+          <div class="row">
+              <div class="col"><input type="text" class="form-control" id="input_from" placeholder="Quand partez-vous ?"></div>
+              <div class="col"><input type="text" class="form-control" id="input_to" placeholder="Quand rentrez-vous ?"></div>
+          </div>
+          <div class="row">
+              <div class="col">
+                  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                      <option selected>Choose...</option>
+                      <option value="1">1 adulte</option>
+                      <option value="2">2 adultes</option>
+                      <option value="3">3 adultes</option>
+                      <option value="4">4 adultes</option>
+                      <option value="5">5 adultes</option>
+                    </select>
+              </div>
+              <div class="col">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                      Vols directs
+                    </label>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-sm-5"><button type="submit" class="btn btn-primary">Rechercher des vols</button></div>
+              <div class="col-sm-5"><button type="submit" class="btn btn-outline-primary">Rechercher Vol + Hôtel</button></div>
+          </div>
+        </form>
+    </div>
+
+
+{% endblock %}
