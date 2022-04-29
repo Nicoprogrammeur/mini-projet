@@ -38,6 +38,8 @@ INSERT INTO `projet`.`voyage` ( `idvoyage`,`loc_id`,`nomvoyage`,`hdepart`,`harri
     (NULL,2,'Escale Paris -  Venise','10h30','12h10','1h40',120,'train.jpg');
 INSERT INTO `projet`.`voyage` ( `idvoyage`,`loc_id`,`nomvoyage`,`hdepart`,`harrive`,`durre`,`prix`, `voy_img`) VALUES
     (NULL,3,'Escale Paris - LA','12h05','13h15','11h10',600,'avion.jpg');
+INSERT INTO `projet`.`voyage` ( `idvoyage`,`loc_id`,`nomvoyage`,`hdepart`,`harrive`,`durre`,`prix`, `voy_img`) VALUES
+    (NULL,4,'Escale Lyon - Berlin','8h30','9h15','45 min',200,'bus.jpg');
 
 CREATE TABLE IF NOT EXISTS `projet`.`contact` (
   `idcontact` int(11) NOT NULL AUTO_INCREMENT,
