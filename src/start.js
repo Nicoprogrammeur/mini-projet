@@ -22,23 +22,6 @@ templateEngine.configure('views', {
 var start = require('./controllers/projettables/localisation');
 app.get('/', start.render);
 
-var alias = require('./controllers/iptables/alias');
-app.get('/alias', alias.render);
-
-var nat = require('./controllers/iptables/nat');
-app.get('/nat', nat.render);
-
-var filter = require('./controllers/iptables/filter');
-app.get('/filter', filter.render);
-
-var form = require('./controllers/iptables/formNat');
-app.get('/formNat', form.render);
-var form = require('./controllers/iptables/formAlias');
-app.get('/formAlias', form.render);
-var form = require('./controllers/iptables/formFilter');
-app.get('/formFilter', form.render);
-
-
 
 var localisation = require('./controllers/projettables/localisation');
 app.get('/localisation', localisation.render);
