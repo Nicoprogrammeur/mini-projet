@@ -12,7 +12,7 @@ class Dbprojet {
       database: 'projet'
     };
   }
-
+/*demarrage serveuer avec les options situer au dessus */ 
   async startConnexion() {
     try {
       connexion = await db.createConnection(options);

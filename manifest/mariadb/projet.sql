@@ -1,7 +1,8 @@
 CREATE DATABASE IF NOT EXISTS `projet` ;
+/*Creation de la base de donées  projet */
 
 USE `projet`;
-   CREATE TABLE IF NOT EXISTS `projet`.`localisation` ( 
+   CREATE TABLE IF NOT EXISTS `projet`.`localisation` (  /*créaton de la table localistaion */
   `idloc` int(11) DEFAULT NULL,
   `vdepart` varchar(50) DEFAULT NULL,
   `pdepart` varchar(50) DEFAULT NULL,
@@ -10,7 +11,7 @@ USE `projet`;
  
   `prix` float(6) DEFAULT NULL,
   `loc_img` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8; /*On utilise comme moteur de base de données InooDB*/
 INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `prix`, `loc_img`) VALUES 
   (1,'Lyon','France','Venise','Italie',60,'train.jpg');
 INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `prix`, `loc_img`) VALUES 
@@ -19,7 +20,7 @@ INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`par
   (3,'Paris','France','Los-Angeles','USA',600,'avion.jpg');
 
 CREATE TABLE IF NOT EXISTS `projet`.`voyage` (
-  `idvoyage` int(11) NOT NULL AUTO_INCREMENT,
+  `idvoyage` int(11) NOT NULL AUTO_INCREMENT, /*L'auto increment permet d'eviter de rentrer a la main l'id cela permet d'avoir un id unique donc un voyage unique */
   `loc_id` int(11) DEFAULT NULL,
   `nomvoyage` varchar(50) DEFAULT NULL,
   `hdepart` varchar(6) DEFAULT NULL,
@@ -32,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `projet`.`voyage` (
 
 
 INSERT INTO `projet`.`voyage` ( `idvoyage`,`loc_id`,`nomvoyage`,`hdepart`,`harrive`,`durre`,`prix`, `voy_img`) VALUES
-	(NULL,1,'Escale Lyon - Venise','8h30','9h50','1h20',60,'train.jpg');
+	(NULL,1,'Escale Lyon - Venise','8h30','9h50','1h20',60,'train.jpg'); /*on definis l'id NULL car on auto increment */
 INSERT INTO `projet`.`voyage` ( `idvoyage`,`loc_id`,`nomvoyage`,`hdepart`,`harrive`,`durre`,`prix`, `voy_img`) VALUES
     (NULL,2,'Escale Paris -  Venise','10h30','12h10','1h40',120,'train.jpg');
 INSERT INTO `projet`.`voyage` ( `idvoyage`,`loc_id`,`nomvoyage`,`hdepart`,`harrive`,`durre`,`prix`, `voy_img`) VALUES
