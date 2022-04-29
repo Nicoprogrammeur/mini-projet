@@ -8,16 +8,16 @@ USE `projet`;
   `pdepart` varchar(50) DEFAULT NULL,
   `varrive` varchar(50) DEFAULT NULL,
   `parrive` varchar(50) DEFAULT NULL,
- 
-  `prix` float(6) DEFAULT NULL,
   `loc_img` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8; /*On utilise comme moteur de base de données InooDB*/
-INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `prix`, `loc_img`) VALUES 
-  (1,'Lyon','France','Venise','Italie',60,'train.jpg');
-INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `prix`, `loc_img`) VALUES 
-  (2,'Paris','France','Venise','Italie',120,'train.jpg');
-INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `prix`, `loc_img`) VALUES 
-  (3,'Paris','France','Los-Angeles','USA',600,'avion.jpg');
+INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `loc_img`) VALUES 
+  (1,'Lyon','France','Venise','Italie','train.jpg');
+INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `loc_img`) VALUES 
+  (2,'Paris','France','Venise','Italie','train.jpg');
+INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `loc_img`) VALUES 
+  (3,'Paris','France','Los-Angeles','USA','avion.jpg');
+INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `loc_img`) VALUES 
+  (4,'Lyon','France','Berlin','Allemagne','bus.jpg');
 
 CREATE TABLE IF NOT EXISTS `projet`.`voyage` (
   `idvoyage` int(11) NOT NULL AUTO_INCREMENT, /*L'auto increment permet d'eviter de rentrer a la main l'id cela permet d'avoir un id unique donc un voyage unique */
