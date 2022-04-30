@@ -4,20 +4,24 @@ CREATE DATABASE IF NOT EXISTS `projet` ;
 USE `projet`;
    CREATE TABLE IF NOT EXISTS `projet`.`localisation` (  /*créaton de la table localistaion */
   `idloc` int(11) DEFAULT NULL,
-  `vdepart` varchar(50) DEFAULT NULL,
-  `pdepart` varchar(50) DEFAULT NULL,
-  `varrive` varchar(50) DEFAULT NULL,
-  `parrive` varchar(50) DEFAULT NULL,
-  `loc_img` varchar(50) DEFAULT NULL
+  `villeloc` varchar(50) DEFAULT NULL,
+  `idpaysloc` int(11) DEFAULT NULL,
+  `paysloc` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8; /*On utilise comme moteur de base de données InooDB*/
-INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `loc_img`) VALUES 
-  (1,'Lyon','France','Venise','Italie','train.jpg');
-INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `loc_img`) VALUES 
-  (2,'Paris','France','Venise','Italie','train.jpg');
-INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `loc_img`) VALUES 
-  (3,'Paris','France','Los-Angeles','USA','avion.jpg');
-INSERT INTO `projet`.`localisation` ( `idloc`,`vdepart`,`pdepart`,`varrive`,`parrive`, `loc_img`) VALUES 
-  (4,'Lyon','France','Berlin','Allemagne','bus.jpg');
+INSERT INTO `projet`.`localisation` ( `idloc`,`villeloc`,`idpaysloc`,`paysloc`) VALUES 
+  (1,'Lyon',33,'France');
+INSERT INTO `projet`.`localisation` ( `idloc`,`villeloc`,`idpaysloc`,`paysloc`) VALUES 
+  (2,'Paris',33,'France');
+INSERT INTO `projet`.`localisation` ( `idloc`,`villeloc`,`idpaysloc`,`paysloc`) VALUES 
+  (3,'Los-Angeles',1,'USA');
+INSERT INTO `projet`.`localisation` ( `idloc`,`villeloc`,`idpaysloc`,`paysloc`) VALUES 
+  (4,'Berlin',49,'Allemagne');
+INSERT INTO `projet`.`localisation` ( `idloc`,`villeloc`,`idpaysloc`,`paysloc`) VALUES 
+  (5,'Venise',39,'Italie');
+INSERT INTO `projet`.`localisation` ( `idloc`,`villeloc`,`idpaysloc`,`paysloc`) VALUES 
+  (6,'New-York',1,'USA');
+INSERT INTO `projet`.`localisation` ( `idloc`,`villeloc`,`idpaysloc`,`paysloc`) VALUES 
+  (7,'Marseille',33,'France');
 
 CREATE TABLE IF NOT EXISTS `projet`.`voyage` (
   `idvoyage` int(11) NOT NULL AUTO_INCREMENT, /*L'auto increment permet d'eviter de rentrer a la main l'id cela permet d'avoir un id unique donc un voyage unique */
