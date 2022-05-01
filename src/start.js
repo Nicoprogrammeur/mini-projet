@@ -34,6 +34,8 @@ var contact = require('./controllers/projettables/message_contact');
 app.post('/contact', contact.render);
 var about = require('./controllers/projettables/about');
 app.get('/about', about.render);
+var ville = require('./controllers/projettables/ville');
+app.get('/ville', ville.render);
 
 
 // Routes statiques

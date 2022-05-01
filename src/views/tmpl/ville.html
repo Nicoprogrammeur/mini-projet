@@ -1,0 +1,23 @@
+{% extends 'tmpl/layout.html' %}
+
+{% block title %}Ville {{ items.villeloc }}{% endblock %}
+{% block styles %}
+<link rel="stylesheet" href="css/default.css">
+{% endblock %}
+{% block scripts %}
+{% endblock %}
+
+{% block content %}
+
+<div class="row mb-2">
+    <div class="col-md-4">
+        <img src="images/ville/{{ items.villeloc }}.jpg" class="card-img-top" alt="..." >
+    </div>
+    <div class="col-mb-8">
+        <div><h1>{{ items.villeloc }}</h1></div>
+        <div>{{ items.paysloc }}</div>
+        <div>{{ items.idpaysloc }}</div>
+    </div>
+</div>
+
+{% endblock %}

@@ -21,7 +21,18 @@ INSERT INTO `projet`.`localisation` ( `idloc`,`villeloc`,`idpaysloc`,`paysloc`) 
 INSERT INTO `projet`.`localisation` ( `idloc`,`villeloc`,`idpaysloc`,`paysloc`) VALUES 
   (6,'New-York',1,'USA');
 INSERT INTO `projet`.`localisation` ( `idloc`,`villeloc`,`idpaysloc`,`paysloc`) VALUES 
-  (7,'Marseille',33,'France');
+  (7,'Tokyo',81,'Japon');
+INSERT INTO `projet`.`localisation` ( `idloc`,`villeloc`,`idpaysloc`,`paysloc`) VALUES 
+  (8,'Londres',44,'Royaume-uni');
+INSERT INTO `projet`.`localisation` ( `idloc`,`villeloc`,`idpaysloc`,`paysloc`) VALUES 
+  (9,'Chicago',1,'USA');
+INSERT INTO `projet`.`localisation` ( `idloc`,`villeloc`,`idpaysloc`,`paysloc`) VALUES 
+  (10,'Marseille',33,'France');
+INSERT INTO `projet`.`localisation` ( `idloc`,`villeloc`,`idpaysloc`,`paysloc`) VALUES 
+  (11,'Annecy',33,'France');
+INSERT INTO `projet`.`localisation` ( `idloc`,`villeloc`,`idpaysloc`,`paysloc`) VALUES 
+  (12,'Chambéry',33,'France');
+
 
 CREATE TABLE IF NOT EXISTS `projet`.`voyage` (
   `idvoyage` int(11) NOT NULL AUTO_INCREMENT, /*L'auto increment permet d'eviter de rentrer a la main l'id cela permet d'avoir un id unique donc un voyage unique */
