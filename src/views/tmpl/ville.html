@@ -1,8 +1,6 @@
 {% extends 'tmpl/layout.html' %}
 
-{% for nom in items %}
-{% block title %}Ville page{% endblock %}
-{% endfor %}
+{% block title %}Ville {{ title }}{% endblock %}
 {% block styles %}
 <link rel="stylesheet" href="css/default.css">
 {% endblock %}
@@ -22,4 +20,55 @@
     </div>
 </div>
 {% endfor %}
+<ul class="mb-2 nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="false">Description</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="voyage-tab" data-bs-toggle="tab" data-bs-target="#voyage" type="button" role="tab" aria-controls="voyage" aria-selected="true">Voyage</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="avis-tab" data-bs-toggle="tab" data-bs-target="#avis" type="button" role="tab" aria-controls="avis" aria-selected="false">Avis</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade" id="description" role="tabpanel" aria-labelledby="description-tab">...</div>
+    <div class="tab-pane fade show active" id="voyage" role="tabpanel" aria-labelledby="voyage-tab">
+        
+        {% for row in voyage %}
+        {% for v2 in items %}
+        {% if row.loc_id == v2.idpaysloc %}
+        <div class="row mb-2 border rounded overflow-hidden flex-md-row shadow-sm h-md-250 position-relative">
+            <div class="col-md-3">
+                <img class="card-img-top" src="images/{{ row.voy_img }}" alt="Card image cap">
+            </div>
+            <div class="col-md-6">
+                <div class="mb-0">
+                    Nom : {{ row.nomvoyage }}
+                </div>
+                <div class="mb-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  </svg> Départ : {{ row.hdepart }}</div>
+                <div class="mb-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                  </svg> Arrivé : {{ row.harrive }}</div>
+                <div class="mb-3">
+                    durre : {{ row.durre }}
+                </div>
+            </div>
+            <div class="col-md-3">
+                Prix {{ row.prix }} €
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+
+    </div>
+    <div class="tab-pane fade" id="avis" role="tabpanel" aria-labelledby="avis-tab">...</div>
+  </div>
 {% endblock %}

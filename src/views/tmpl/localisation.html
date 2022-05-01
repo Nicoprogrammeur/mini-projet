@@ -11,12 +11,12 @@
 {% block content %}
 
 <div class="container border-bottom">
-    <h2>Liste des localisations</h2>
+    <h2 class="mb-3">Liste des localisations</h2>
     <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4">
         {% for row in items %}
-        <div class="col">
+        <div class="col mb-3">
                 <a href="/ville?v={{ row.villeloc }}" style="text-decoration: none;">
-                    <div class="card" style="width: 18rem; height: 20rem;">
+                    <div class="card" style="height: 20rem;">
                         <img src="images/ville/{{ row.villeloc }}.jpg" class="card-img-top invisible-sm" alt="..." height="200">
                         <div class="card-body">
                             <div class="">
@@ -40,13 +40,13 @@
 </div>
 
 <div class="container">
-    <h2>Explorez la France</h2>
+    <h2 class="mb-3">Explorez la France</h2>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
         {% for row in items %}
         {% if row.idpaysloc == 33 %}
-        <div class="col">
+        <div class="col mb-2">
             <a href="/ville?v={{ row.villeloc }}" style="text-decoration: none;">
-            <div class="card" style="width: 14rem; height: 16rem;">
+            <div class="card" style="height: 16rem;">
                 <img src="images/ville/{{ row.villeloc }}.jpg" class="card-img-top invisible-sm" alt="..." height="180">
                 <div class="card-body">
                     <div class="">
