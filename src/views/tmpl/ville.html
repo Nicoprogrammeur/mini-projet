@@ -16,7 +16,7 @@
     <div class="col-md-8">
         <div><h1>{{ v.villeloc }}</h1></div>
         <div>{{ v.paysloc }}</div>
-        <div>{{ v.idpaysloc }}</div>
+        <div>+{{ v.idpaysloc }}</div>
     </div>
 </div>
 {% endfor %}
@@ -37,7 +37,7 @@
         
         {% for row in voyage %}
         {% for v2 in items %}
-        {% if row.loc_id == v2.idpaysloc %}
+        {% if row.loc_id == v2.idloc %}
         <div class="row mb-2 border rounded overflow-hidden flex-md-row shadow-sm h-md-250 position-relative">
             <div class="col-md-3">
                 <img class="card-img-top" src="images/{{ row.voy_img }}" alt="Card image cap">

@@ -13,8 +13,8 @@
     <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
         <h1 class="display-4 fst-italic">Site de voyage en ligne</h1>
       
-      <form>
-            <div class="form-group">
+      <form method="get" action="/voyage">
+            <div class="form-group mb-3">
                 <div class="form-check form-check-inline">
                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                     <label class="form-check-label" for="inlineRadio1">Aller-retour</label>
@@ -28,15 +28,15 @@
                     <label class="form-check-label" for="inlineRadio2">Multi-destination</label>
               </div>
           </div>
-          <div class="row">
+          <div class="row mb-3">
               <div class="col"><input type="text" class="form-control" id="formGroupExampleInput" placeholder="D'où partez-vous ?"></div>
-              <div class="col"><input type="text" class="form-control" id="formGroupExampleInput2" placeholder="D'où allez-vous"></div>
+              <div class="col"><input type="text" class="form-control" id="formGroupExampleInput2" placeholder="D'où allez-vous" name="dest"></div>
           </div>
-          <div class="row">
+          <div class="row mb-3">
               <div class="col"><input type="text" class="form-control" id="input_from" placeholder="Quand partez-vous ?"></div>
               <div class="col"><input type="text" class="form-control" id="input_to" placeholder="Quand rentrez-vous ?"></div>
           </div>
-          <div class="row">
+          <div class="row mb-3">
               <div class="col">
                   <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
                       <option selected>Choose...</option>
@@ -55,8 +55,7 @@
               </div>
           </div>
           <div class="row">
-              <div class="col-sm-5"><button type="submit" class="btn btn-primary">Rechercher des vols</button></div>
-              <div class="col-sm-5"><button type="submit" class="btn btn-outline-primary">Rechercher Vol + Hôtel</button></div>
+              <div class="col-sm-5"><button type="submit" class="btn btn-primary">Rechercher des voyage</button></div>
           </div>
         </form>
     </div>
