@@ -8,4 +8,5 @@ exports.render = async function (req, res) {
   var villeList = await defaultComponent.getVilleList(req);
 
   res.render('tmpl/ville.html', { items: villeList});
+
 }

@@ -1,6 +1,8 @@
 {% extends 'tmpl/layout.html' %}
 
-{% block title %}Ville {{ items.villeloc }}{% endblock %}
+{% for nom in items %}
+{% block title %}Ville page{% endblock %}
+{% endfor %}
 {% block styles %}
 <link rel="stylesheet" href="css/default.css">
 {% endblock %}
@@ -8,16 +10,16 @@
 {% endblock %}
 
 {% block content %}
-
+{% for v in items %}
 <div class="row mb-2">
     <div class="col-md-4">
-        <img src="images/ville/{{ items.villeloc }}.jpg" class="card-img-top" alt="..." >
+        <img src="images/ville/{{ v.villeloc }}.jpg" class="card-img-top" alt="..." >
     </div>
-    <div class="col-mb-8">
-        <div><h1>{{ items.villeloc }}</h1></div>
-        <div>{{ items.paysloc }}</div>
-        <div>{{ items.idpaysloc }}</div>
+    <div class="col-md-8">
+        <div><h1>{{ v.villeloc }}</h1></div>
+        <div>{{ v.paysloc }}</div>
+        <div>{{ v.idpaysloc }}</div>
     </div>
 </div>
-
+{% endfor %}
 {% endblock %}

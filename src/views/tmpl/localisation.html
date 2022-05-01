@@ -45,6 +45,7 @@
         {% for row in items %}
         {% if row.idpaysloc == 33 %}
         <div class="col">
+            <a href="/ville?v={{ row.villeloc }}" style="text-decoration: none;">
             <div class="card" style="width: 14rem; height: 16rem;">
                 <img src="images/ville/{{ row.villeloc }}.jpg" class="card-img-top invisible-sm" alt="..." height="180">
                 <div class="card-body">
@@ -56,6 +57,7 @@
                     </div>
                 </div>
             </div>
+            </a>
         </div>
         {% endif %}
         {% endfor %}

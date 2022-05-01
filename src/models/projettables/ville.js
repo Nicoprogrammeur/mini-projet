@@ -17,10 +17,10 @@ class Ville {
 
   async getVilleList(rep) {
     try {
-      var ville = rep.query.v;
+      var v = rep.query.v;
 
-      this.villeList = await connexion.query(`SELECT idloc, villeloc, idpaysloc, paysloc FROM localisation WHERE villeloc = "${ville}"`);  
-
+      this.villeList = await connexion.query(`SELECT idloc, villeloc, idpaysloc, paysloc FROM localisation WHERE (villeloc = "${v}")`);  
+      
       return this.villeList;
     }
     catch (anError) {
